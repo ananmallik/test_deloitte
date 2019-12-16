@@ -191,6 +191,7 @@
                         <viewLayoutGuide key="safeArea" id="qEe-So-bmy"/>
                     </view>
                     <connections>
+                        <outlet property="cart_title" destination="6oy-4X-3Ey" id="cBb-Vu-4gn"/>
                         <outlet property="tableView" destination="vdu-n7-Iny" id="gI2-4o-wjC"/>
                     </connections>
                 </viewController>

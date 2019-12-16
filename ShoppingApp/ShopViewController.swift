@@ -43,7 +43,7 @@ class ShopViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         
         // Create the alert controller
-        let alertController = UIAlertController(title: "Add to Cart", message: "Do you want to buy this item?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Add to Cart", message: "Add this item to my cart?", preferredStyle: .alert)
 
         // Create the actions
         let okAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.default) {

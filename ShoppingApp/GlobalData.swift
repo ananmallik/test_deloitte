@@ -1,6 +1,6 @@
 import Foundation
 
-//Singleton class to store Dictionary of Items:
+//Singleton class to store array of cart items:
 class GlobalData
 {
     

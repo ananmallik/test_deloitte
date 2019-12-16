@@ -1,5 +1,5 @@
 # test_deloitte
-a quick version of the shopping cart app
+a quick version of the shopping cart app:
 
 I have included the core function of adding items to the cart and removing them.
 There is no networking to speed up performance. This would be some similar code from a previous project (including authentication):
@@ -37,3 +37,12 @@ There is no networking to speed up performance. This would be some similar code 
         
     }
     
+
+    For adding items to cart simply click on the table and the same for removing items in the cart view.
+
+
+    Let me know if you need more stuff :)
+
+    Thanks!!
+
+    Anan

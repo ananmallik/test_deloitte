@@ -13,6 +13,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var cart_title: UILabel!
     
     
     //Declare and initialize empty arrays:
@@ -20,20 +21,20 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     var quantity_array = [String]()
     var price_array = [String]()
     
-
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
-        
         if(GlobalData.sharedInstance.shopping_cart_id.count == 0 ) {
             
+            self.cart_title.text = "CART IS EMPTY :("
 
         }
         else {
-            
-            
+
             addData()
+            self.cart_title.text = "MY CART HAS " + String(GlobalData.sharedInstance.shopping_cart_id.count) + " ITEM(S)"
+    
         }
     }
     
@@ -68,6 +69,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             self.tableView.reloadData()
             
+            self.cart_title.text = "MY CART HAS " + String(GlobalData.sharedInstance.shopping_cart_id.count) + " ITEM(S)"
             
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) {
@@ -100,8 +102,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         name_item.text = name_array[indexPath.row]
         quantity_item.text = String(quantity_array[indexPath.row]) + " in stock"
         price_item.text = price_array[indexPath.row]
-        
-        let unit_price = price_array[indexPath.row].replacingOccurrences(of: "£", with: "", options: NSString.CompareOptions.literal, range:nil)
+    
             
         return cell
         
